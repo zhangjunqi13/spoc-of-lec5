@@ -67,7 +67,7 @@ void freemem(block* b){
 	block* p=busyHeader->next;
 	while(p!=b && p!=busyTail) p=p->next;
 	p->prev->next=p->next;
-    p->next->prev=p->prev;
+    	p->next->prev=p->prev;
 	block* before=find(p,freeHeader);
 	block* after=before->next;
 	if(p->begin > befor->end+1 && p->end+1 < after->begin){
